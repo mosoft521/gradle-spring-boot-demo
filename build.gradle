@@ -13,13 +13,14 @@ buildscript {
 plugins {
 	id 'java-library'
 	id 'org.springframework.boot' version "${springBootVersion}"
+	id 'io.spring.dependency-management' version '1.1.3'
 }
 
 group = 'org.kfaino'
 version = '0.0.1-SNAPSHOT'
 
 bootJar {
-	mainClass.set('org.kfaino.core.CoreApplication')
+	mainClass.set('org.kfaino.datasource.MultiDatasourceApplication')
 }
 
 java {

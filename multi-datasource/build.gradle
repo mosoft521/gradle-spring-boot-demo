@@ -7,6 +7,10 @@ plugins {
 group = 'org.kfaino'
 version = '0.0.1-SNAPSHOT'
 
+bootJar {
+    mainClass.set('org.kfaino.datasource.MultiDatasourceApplication')
+}
+
 java {
     sourceCompatibility = '17'
 }
@@ -29,4 +33,5 @@ dependencies {
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
 }
